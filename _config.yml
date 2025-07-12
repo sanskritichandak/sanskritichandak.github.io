@@ -1,0 +1,36 @@
+# This file is *NOT* reloaded automatically
+
+# Site variables
+# Can create custom variables, accessible via {{ site.myvariable }}
+title: Sanskriti Chandak
+author: Sanskriti Chandak
+email: sanskritichandak2@gmail.com
+description: Welcome to my homepage.
+markdown: kramdown
+url: 'https://sanskritichandak.github.io/'
+
+# Build settings
+theme: minima
+show_excerpts: true
+show_downloads: true
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+highlighter: rouge
+
+# Theme settings
+minima:
+  date_format: "%d %B %Y"
+
+header_pages:
+  - publications.markdown
+  - teaching.markdown
+  - talks.markdown
+  - service.markdown
+
+# Exclude from build
+exclude:
+- Gemfile
+- Gemfile.lock
+- vendor
