@@ -4,87 +4,49 @@
 
 @import "minima";
 
+// Custom color variables
 $bg-col: #F9F9FC;
 $bg-col2: #F3E0F6;
 $text-col: #090909;
 $col-red: #7B032F;
 $col-purple: #6625A4;
-$col-blue: #075C98;
+$col-blue: #075C98;       // dark blue
 $col-green: #088A08;
 $col-pink: #8A0868;
+$light-blue: #D6ECFF;      // NEW: for footer background
 
-body{
+// Global page styling
+body {
     background-color: $bg-col;
     color: $text-col;
 }
 
-figure{
+// Make <figure> blocks inline
+figure {
     display: inline-block;
     vertical-align: top;
 }
 
-.site-header{
+// Header styling
+.site-header {
     border-top: none;
     border-bottom: none;
     min-height: 55px;
-    #    background: $bg-col2;
+    
+    .site-title, .site-nav {
+        color: $text-col !important;  // makes header text black
+    }
 }
 
-.site-footer{
+// Footer styling
+.site-footer {
     border-top: none;
     padding: 8px;
-    background: $bg-col2;
+    background: $light-blue;  // light blue background
+    color: $text-col;         // ensure footer text remains dark
 }
 
-.frame{
-    float: right;
-    #  padding-top: 5px;
-    padding-left: 10px;
-    #  padding-right: 20px;
-}
-
-a{
-    &:link{
-        color: $col-blue;
-    }
-    &:visited{
-        color: $col-blue;
-    }
-}
-
-h1{
-    color: $col-red;
-}
-
-h2{
-    color: $col-purple;
-    margin-bottom:8px;
-    margin-top:50px;
-    font-size:25px;
-}
-
-h3{
-    color: $col-pink;
-    margin-bottom: 8px;
-    margin-top: 20px;
-    font-size: 20px;
-}
-
-h4{
-  color: $col-green;
-  margin-bottom: 5px;
-  margin-top: 15px;
-}
-
-.page-link{
-    &:link{
-        color: $col-red;
-    }
-   &:visited{
-        color: $col-red;
-    }
-}
-
-.imgContainer{
-    float:left;
+// Section header styles (e.g., <h2>, <h3>, etc.)
+h2, h3, h4 {
+    color: $col-blue;  // dark blue for headings
 }
