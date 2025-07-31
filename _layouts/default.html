@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-    {%- include head.html -%}
+  {%- include head.html -%}
 
-    <body>
+  <body>
 
-        {%- include header.html -%}
+    <!-- 🌙 Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" style="position: fixed; top: 15px; right: 15px; z-index: 999;">
+      Toggle Dark Mode
+    </button>
 
-        <main class="page-content" aria-label="Content">
-            <div class="wrapper">
-                {{ content }}
-            </div>
-        </main>
+    {%- include header.html -%}
 
-        {%- include footer.html -%}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
 
-    </body>
+    {%- include footer.html -%}
+
+    <!-- 🌙 Dark Mode Script -->
+    <script>
+      const toggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+
+      // Load dark mode preference
+      if (localStorage.getItem('dark-mode') === 'true') {
+        body.classList.add('dark-mode');
+      }
+
+      toggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
+      });
+    </script>
+
+  </body>
 
 </html>
