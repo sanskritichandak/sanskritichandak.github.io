@@ -21,20 +21,22 @@
     {%- include footer.html -%}
 
     <!-- 🌙 Dark Mode Script -->
-    <script>
-      const toggle = document.getElementById('dark-mode-toggle');
-      const body = document.body;
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
-      // Load dark mode preference
-      if (localStorage.getItem('dark-mode') === 'true') {
-        body.classList.add('dark-mode');
-      }
+    // Load saved dark mode setting
+    if (localStorage.getItem('dark-mode') === 'true') {
+      body.classList.add('dark-mode');
+    }
 
-      toggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
-      });
-    </script>
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
+    });
+  });
+</script>
 
   </body>
 
