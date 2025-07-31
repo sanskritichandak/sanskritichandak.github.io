@@ -10,10 +10,10 @@ $bg-col2: #F3E0F6;
 $text-col: #090909;
 $col-red: #7B032F;
 $col-purple: #6625A4;
-$col-blue: #075C98;       // dark blue
+$col-blue: #003366;       // UPDATED: darker blue for headers
 $col-green: #088A08;
 $col-pink: #8A0868;
-$light-blue: #D6ECFF;      // NEW: for footer background
+$light-blue: #CCE0F5;      // UPDATED: lighter navy for footer background
 
 // Global page styling
 body {
@@ -42,11 +42,11 @@ figure {
 .site-footer {
     border-top: none;
     padding: 8px;
-    background: $light-blue;  // light blue background
+    background: $light-blue;  // lighter navy background
     color: $text-col;         // ensure footer text remains dark
 }
 
 // Section header styles (e.g., <h2>, <h3>, etc.)
 h2, h3, h4 {
-    color: $col-blue;  // dark blue for headings
+    color: $col-blue;  // darker blue for headings
 }
