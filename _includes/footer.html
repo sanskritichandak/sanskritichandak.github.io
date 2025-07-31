@@ -1,30 +1,25 @@
 <footer class="site-footer h-card">
-    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-    <div class="wrapper">
-        <div class="footer-col-wrapper">
+  <div class="wrapper">
+    <div class="footer-col-wrapper" style="display: flex; justify-content: space-between; align-items: center;">
 
-            <!-- name and email on right -->
-            <div class="footer-col-wrapper">
-                <div class="image123">
-                    <div class="imgContainer">
-                        <p><a href="https://www.linkedin.com/in/sanskritichandak/">
-                            <img src="/graphics/linkedin.svg" style="width: 40px; border: 0px solid #111111">
-                        </a></p>
-                    </div>
-                    <div class="imgContainer">
-                        <p><a href="https://github.com/sanskritichandak">
-                            <img src="/graphics/github.svg" style="width: 40px; border: 0px solid #111111">
-                        </a></p>
-                    </div>
-                </div>
+      <!-- Icons (Left side) -->
+      <div class="image123" style="display: flex; gap: 15px;">
+        <a href="https://www.linkedin.com/in/sanskritichandak/" target="_blank">
+          <img src="{{ '/assets/linkedin.svg' | relative_url }}" style="width: 40px;">
+        </a>
+        <a href="https://github.com/sanskritichandak" target="_blank">
+          <img src="{{ '/assets/github.svg' | relative_url }}" style="width: 40px;">
+        </a>
+      </div>
 
-                <div align="right">
-                    {{ site.author }} <br>
-                    <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-                </div>
-            </div>
+      <!-- Name and Email (Right side) -->
+      <div style="text-align: right;">
+        {{ site.author }} <br>
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
 
-        </div>
     </div>
+  </div>
 </footer>
