@@ -51,3 +51,15 @@ figure {
   display: inline-block;
   vertical-align: top;
 }
+
+/* Optional: subtle hover styling for toggle icon */
+#dark-mode-toggle {
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
