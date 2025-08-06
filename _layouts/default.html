@@ -5,11 +5,6 @@
 
   <body>
 
-    <!-- 🌙 Dark Mode Icon Toggle -->
-    <div id="dark-mode-toggle" style="position: fixed; top: 15px; right: 15px; z-index: 999; cursor: pointer; font-size: 24px;">
-      🌙
-    </div>
-
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -19,28 +14,6 @@
     </main>
 
     {%- include footer.html -%}
-
-    <!-- 🌙 Dark Mode Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggle = document.getElementById('dark-mode-toggle');
-        const body = document.body;
-
-        // Load saved mode
-        const isDark = localStorage.getItem('dark-mode') === 'true';
-        if (isDark) {
-          body.classList.add('dark-mode');
-          toggle.innerText = '☀️';
-        }
-
-        toggle.addEventListener('click', () => {
-          body.classList.toggle('dark-mode');
-          const isNowDark = body.classList.contains('dark-mode');
-          localStorage.setItem('dark-mode', isNowDark);
-          toggle.innerText = isNowDark ? '☀️' : '🌙';
-        });
-      });
-    </script>
 
   </body>
 
