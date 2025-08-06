@@ -3,26 +3,16 @@
 
 @import "minima";
 
-// Default light mode variables
-:root {
-  --bg-color: #F9F9FC;
-  --text-color: #090909;
-  --header-color: #003366;
-  --footer-bg: #CCE0F5;
-}
+// Custom light mode colors
+$bg-col: #F9F9FC;
+$text-col: #090909;
+$header-color: #003366;
+$footer-bg: #CCE0F5;
 
-// Dark mode overrides
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #F0F0F0;
-  --header-color: #66B2FF;
-  --footer-bg: #1E1E2F;
-}
-
-// Apply variables to elements
+// Global page styling
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: $bg-col;
+  color: $text-col;
 }
 
 .site-header {
@@ -32,34 +22,22 @@ body {
 
   .site-title,
   .site-nav {
-    color: var(--text-color) !important;
+    color: $text-col !important;
   }
 }
 
 .site-footer {
   border-top: none;
   padding: 8px;
-  background: var(--footer-bg);
-  color: var(--text-color);
+  background: $footer-bg;
+  color: $text-col;
 }
 
 h2, h3, h4 {
-  color: var(--header-color);
+  color: $header-color;
 }
 
 figure {
   display: inline-block;
   vertical-align: top;
-}
-
-/* Optional: subtle hover styling for toggle icon */
-#dark-mode-toggle {
-  background: transparent;
-  padding: 6px 10px;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-#dark-mode-toggle:hover {
-  background: rgba(0, 0, 0, 0.05);
 }
